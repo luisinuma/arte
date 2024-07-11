@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    color: #333;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background: #0072ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #005bb5;
+    transform: scale(1.1);
+}
+
+#progress-bar {
+    height: 20px;
+    background: #00c6ff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#level-indicator {
+    margin: 20px 0;
+}
+
+#question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#art-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.choice {
+    background: #0072ff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    color: white;
+    font-size: 16px;
+}
+
+.choice:hover {
+    background: #005bb5;
+    transform: scale(1.05);
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    perspective: 1000px;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+    transform: rotateY(0deg);
+    animation: popupAnimation 1s ease forwards;
+}
+
+@keyframes popupAnimation {
+    from { transform: rotateY(-90deg); opacity: 0; }
+    to { transform: rotateY(0deg); opacity: 1; }
+}
